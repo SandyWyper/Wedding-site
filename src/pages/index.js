@@ -87,7 +87,7 @@ class Index extends React.Component {
                 </ul> */}
               </div>
               <span className="image">
-                <img src={pic01} alt="Jenny and Sandy" />
+                <img src={pic04} alt="Jenny and Sandy" />
               </span>
             </div>
           </section>
