@@ -9,6 +9,7 @@ import pic04 from '../assets/images/smootchin.jpg'
 import Header from '../components/Header'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
+import Map from '../components/Map'
 
 class Index extends React.Component {
   constructor(props) {
@@ -90,6 +91,7 @@ class Index extends React.Component {
                 <img src={pic04} alt="Jenny and Sandy" />
               </span>
             </div>
+            <Map />
           </section>
 
           <section id="travel" className="main special">
