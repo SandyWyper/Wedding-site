@@ -46,7 +46,7 @@ export default class Map extends Component {
         >
           <Marker
             position={markerPosition}
-            icon={'http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png'}
+            icon={'//maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png'}
           />
         </GoogleMap>
       </LoadScript>
