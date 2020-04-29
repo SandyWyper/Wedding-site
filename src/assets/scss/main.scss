@@ -1,0 +1,243 @@
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+@import '../css/font-awesome.min.css';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
+
+/*
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+@include skel-breakpoints(
+  (
+    xlarge: '(max-width: 1680px)',
+    large: '(max-width: 1280px)',
+    medium: '(max-width: 980px)',
+    small: '(max-width: 736px)',
+    xsmall: '(max-width: 480px)',
+    xxsmall: '(max-width: 360px)',
+  )
+);
+
+@include skel-layout(
+  (
+    reset: 'full',
+    boxModel: 'border',
+    grid: (
+      gutters: 1.5em,
+    ),
+    breakpoints: (
+      small: (
+        grid: (
+          gutters: 1em,
+        ),
+      ),
+    ),
+  )
+);
+
+@mixin color($p) {
+  @include color-typography($p);
+  @include color-box($p);
+  @include color-button($p);
+  @include color-form($p);
+  @include color-icon($p);
+  @include color-list($p);
+  @include color-section($p);
+  @include color-table($p);
+  @include color-spotlight($p);
+}
+
+// Base.
+
+@import 'base/page';
+@import 'base/typography';
+
+// Component.
+
+@import 'components/box';
+@import 'components/button';
+@import 'components/form';
+@import 'components/icon';
+@import 'components/image';
+@import 'components/list';
+@import 'components/section';
+@import 'components/table';
+@import 'components/features';
+@import 'components/statistics';
+@import 'components/spotlight';
+
+// Layout.
+
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/main';
+@import 'layout/footer';
+@import 'layout/wrapper';
+
+// Sandy's styles
+.footer-spacing {
+  padding: 3rem 0;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.travel-option {
+  display: flex;
+  flex-wrap: wrap;
+  @include breakpoint(medium) {
+  }
+  @include breakpoint(small) {
+  }
+  .travel-title {
+    width: 35%;
+    @include breakpoint(medium) {
+    }
+    @include breakpoint(small) {
+      width: 100%;
+    }
+    &:after {
+      display: block;
+
+      content: '';
+      width: 80%;
+      height: 1px;
+      margin: (_size(element-margin) * 0.35) 0 (_size(element-margin) * 0.5) 0;
+      border-radius: 2px;
+      background-color: #ddd;
+      @include breakpoint(small) {
+        width: 100%;
+      }
+    }
+
+    h3 {
+      margin-bottom: 0;
+      text-align: left;
+      @include breakpoint(small) {
+      }
+    }
+  }
+  .travel-body {
+    width: 65%;
+    text-align: left;
+    @include breakpoint(small) {
+      width: 100%;
+    }
+  }
+}
+
+.booking-links {
+  text-align: left;
+  li {
+    width: auto;
+    position: relative;
+    list-style: none;
+
+    .icon {
+      position: absolute;
+      transform: translateX(0, 0);
+      color: #ccc;
+    }
+    a {
+      margin: 0 2.5rem;
+    }
+  }
+  li:hover {
+    .icon {
+      color: #aaa;
+      transform: translate(2px, -2px);
+      transition: 0.1s ease-in;
+    }
+  }
+}
+.w-80 {
+  width: 80%;
+  margin: 0 auto;
+}
+
+// form
+
+#RSVP {
+  .field {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    align-items: center;
+    &-check {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      align-items: center;
+      label {
+        width: 50%;
+        text-align: right;
+        padding-right: 2rem;
+        margin-bottom: 0;
+        @include breakpoint(small) {
+          width: 80%;
+          text-align: left;
+        }
+      }
+      input[type='checkbox'] {
+        // appearance: checkbox;
+        background-color: rgba(222, 222, 222, 0.25);
+
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        z-index: 1;
+        opacity: 1;
+        margin: 0;
+        width: 30px;
+        height: 30px;
+      }
+      input[type='checkbox']:focus {
+        outline: none;
+      }
+      input[type='checkbox']:checked:after {
+        position: relative;
+        bottom: 10px;
+        left: 2px;
+        color: black;
+        content: '\2713'; /* check mark */
+        font-size: 30px;
+        vertical-align: middle;
+      }
+    }
+    label {
+      width: 50%;
+      text-align: right;
+      padding-right: 2rem;
+      margin-bottom: 0;
+      @include breakpoint(small) {
+        width: 100%;
+        text-align: left;
+      }
+    }
+    input,
+    textarea {
+      width: 50%;
+      @include breakpoint(small) {
+        width: 100%;
+      }
+    }
+
+    select {
+      width: 50%;
+      appearance: button;
+      @include breakpoint(small) {
+        width: 100%;
+      }
+    }
+  }
+  input[type='submit'].special {
+    background-color: #f4a259;
+    &:hover {
+      background-color: #c28148;
+    }
+  }
+}
