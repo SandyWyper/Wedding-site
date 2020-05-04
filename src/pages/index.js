@@ -1,10 +1,10 @@
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import React from 'react'
 import Helmet from 'react-helmet'
 import { Waypoint } from 'react-waypoint'
-import pic01 from '../assets/images/all-smart.png'
-import pic02 from '../assets/images/[S+J].png'
-import pic03 from '../assets/images/US2.png'
+// import pic01 from '../assets/images/all-smart.png'
+// import pic02 from '../assets/images/[S+J].png'
+// import pic03 from '../assets/images/US2.png'
 import pic04 from '../assets/images/smootchin.jpg'
 import Header from '../components/Header'
 import Layout from '../components/layout'
@@ -262,6 +262,7 @@ class Index extends React.Component {
               name="RSVP"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
+              action="/thank-you/"
             >
               <input type="hidden" name="bot-field" value="RSVP" />
               <div className="field">

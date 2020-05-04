@@ -19,13 +19,7 @@ export default class Map extends Component {
       rotateControl: false,
       fullscreenControl: false,
     }
-    // const mapType = 'satellite'
-    // const zoomButton = () =>{
-    //   return (
-    //     <button>
-    //       </button>
-    //   )
-    // }
+
     const markerPosition = {
       lat: 50.485,
       lng: -5.03,
