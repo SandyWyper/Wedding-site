@@ -121,8 +121,9 @@ class Index extends React.Component {
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               action="/thank-you/"
+              data-netlify-recaptcha="true"
             >
-              <input type="hidden" name="bot-field" value="RSVP" />
+              <input type="hidden" name="bot-field" />
               <div className="field">
                 <label htmlFor="names">Name(s) on the invitation - </label>
                 <input
@@ -211,6 +212,7 @@ class Index extends React.Component {
                   onChange={this.handleChange}
                 />
               </div>
+              <div />
               <ul className="actions">
                 <li>
                   <input type="submit" value="Send" className="special" />
@@ -249,26 +251,171 @@ class Index extends React.Component {
               </p>
               <img src={tipiTwo} alt="Wild Tipis" />
             </div>
+
             <p className="text-left">
-              The shutle bus will be running from around 7pm onwards, but we ask
-              that you make your own way to the venue. It's about a 15 minitue
-              drive from Newquay.
+              Bedruthan Steps has been officially accredited with Dark Sky
+              Discovery Status, which means that it is away from the worst of
+              any local light pollution and provides excellent stargazing
+              conditions so make sure you are warm enough to enjoy it should the
+              skies be clear enough. If you are local and able to, we encourage
+              you to bring along a blanket or two so we can all keep cosy having
+              a drink around the open fire.
             </p>
-            <ul className="actions">
+            <div className="directions-container">
+              <ul className="actions">
+                <li>
+                  <a
+                    href="https://www.google.com/maps/dir//50.4859372,-5.0299518/@50.4799437,-5.0225433,15z/data=!4m2!4m1!3e0?hl=en&authuser=0"
+                    className="button special"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Directions
+                  </a>
+                </li>
+              </ul>
+              <p className="text-left">
+                The shutle bus will be running from around 7pm onwards, but we
+                ask that you make your own way to the venue. It's about a 15
+                minitue drive from Newquay.
+              </p>
+            </div>
+            <div className="mb-2">
+              <Map />
+            </div>
+            <div className="text-left">
+              <h3>Dresscode</h3>
+              <p>
+                It is a wedding so worth dressing up for but we are happy for
+                you to wear whatever is comfortable. Kilts welcome! Due to the
+                nature of the site, we strongly recommend flat shoes only for
+                your own comfort and safety. The wedding and reception will be
+                held inside giant tepees which will be adequately warm, however,
+                there is lots of outdoor space to enjoy and it may get quite
+                cool in the evening so we recommend taking a warm coat with you.
+              </p>
+              <h3>Drinks</h3>
+              <p>
+                We will be providing a free bar of wine, beer, cider and soft
+                drinks for you to enjoy throughout the day and evening. For the
+                evening reception, if you would like to bring any spirits along
+                with you to contribute to the bar, we will provide the mixers,
+                fruit, ice, etc. You will not need to pay for drinks so no need
+                to worry about bringing cash.
+              </p>
+              <h3>Children</h3>
+              <p>
+                Your children are more than welcome on the day. There will be a
+                kids’ play tent available where kids can play together and make
+                friends. Maybe bring a toy along to play with so mum and dad can
+                enjoy a prosecco or five!
+              </p>
+            </div>
+          </section>
+
+          <section id="accommodation" className="main special">
+            <header className="major">
+              <h2>Accommodation</h2>
+              {/* <p>
+                Donec imperdiet consequat consequat. Suspendisse feugiat congue
+                <br />
+                posuere. Nulla massa urna, fermentum eget quam aliquet.
+              </p> */}
+            </header>
+            <p className="content">
+              There will be free camping available onsite for tents or campers
+              with toilets and showers available for your use. Camping is
+              available from Thursday to Monday but be aware that there will be
+              people around to set up/take down the wedding teepees and other
+              equipment on the days surrounding the wedding. If you would like
+              to camp and would like help sourcing a tent and other camping
+              gear, we will see what we can do for you. Alternatively, there is
+              a huge amount of accommodation available in the local area. We
+              have attached links to help you find accommodation suited to your
+              needs and budget. If you are unsure of the location, just get in
+              touch to ask us.
+            </p>
+
+            <ul className="booking-links">
               <li>
+                <span className="icon fa-external-link-square"></span>
                 <a
-                  href="https://www.google.com/maps/dir//50.4859372,-5.0299518/@50.4799437,-5.0225433,15z/data=!4m2!4m1!3e0?hl=en&authuser=0"
-                  className="button special"
+                  href="https://www.booking.com/city/gb/newquay.en-gb.html?label=gen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4ARfIAQzYAQHoAQH4AQuIAgGoAgO4AunZkPUFwAIB;sid=282c0fce16b9896c972a50e45c4c6de8;breadcrumb=searchresults_irene;srpvid=2d0257c6938e000a&"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Directions
+                  Booking.com
+                </a>
+              </li>
+              <li>
+                <span className="icon fa-external-link-square"></span>
+                <a
+                  href="https://www.airbnb.co.uk/s/Newquay/homes?tab_id=all_tab&refinement_paths%5B%5D=%2Fhomes&query=Newquay&place_id=ChIJh1a5WhEMa0gRY1JU4PEam8Q&source=structured_search_input_header&search_type=search_query"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  AirBnB
+                </a>
+              </li>
+              <li>
+                <span className="icon fa-external-link-square"></span>
+                <a
+                  href="https://www.travelodge.co.uk/hotels/407/Newquay-Seafront-hotel?WT.tsrc=GHA_Organic&utm_campaign=GHA_Newquay%20Seafront&utm_medium=GHA_Organic&utm_source=google"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Travel Lodge
+                </a>
+              </li>
+              <li>
+                <span className="icon fa-external-link-square"></span>
+                <a
+                  href="https://www.premierinn.com/gb/en/hotels/england/cornwall/newquay/newquay-seafront.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Premier Inn
                 </a>
               </li>
             </ul>
-            <Map />
+            <p className="w-80">
+              *Please note that the Premier Inn in Quintrell Downs is a 10-15
+              minute drive from Newquay centre and not en route for transport
+              back to Newquay on the evening of the wedding
+            </p>
           </section>
-
+          {/* 
+          <section id="more-info" className="main">
+            <header className="major">
+              <h2>More info</h2>
+            </header> */}
+          {/* <h3>Dresscode</h3>
+            <p>
+              It is a wedding so worth dressing up for but we are happy for you
+              to wear whatever is comfortable. Kilts welcome! Due to the nature
+              of the site, we strongly recommend flat shoes only for your own
+              comfort and safety. The wedding and reception will be held inside
+              giant tepees which will be adequately warm, however, there is lots
+              of outdoor space to enjoy and it may get quite cool in the evening
+              so we recommend taking a warm coat with you.
+            </p>
+            <h3>Drinks</h3>
+            <p>
+              We will be providing a free bar of wine, beer, cider and soft
+              drinks for you to enjoy throughout the day and evening. For the
+              evening reception, if you would like to bring any spirits along
+              with you to contribute to the bar, we will provide the mixers,
+              fruit, ice, etc. You will not need to pay for drinks so no need to
+              worry about bringing cash.
+            </p>
+            <h3>Children</h3>
+            <p>
+              Your children are more than welcome on the day. There will be a
+              kids’ play tent available where kids can play together and make
+              friends. Maybe bring a toy along to play with so mum and dad can
+              enjoy a prosecco or five!
+            </p> */}
+          {/* </section> */}
           <section id="travel" className="main special">
             <header className="major">
               <h2>Travel</h2>
@@ -352,117 +499,6 @@ class Index extends React.Component {
                 </div>
               </div>
             </div>
-          </section>
-
-          <section id="accommodation" className="main special">
-            <header className="major">
-              <h2>Accommodation</h2>
-              {/* <p>
-                Donec imperdiet consequat consequat. Suspendisse feugiat congue
-                <br />
-                posuere. Nulla massa urna, fermentum eget quam aliquet.
-              </p> */}
-            </header>
-            <p className="content">
-              There will be free camping available onsite for tents or campers
-              with toilets and showers available for your use. Camping is
-              available from Thursday to Monday but be aware that there will be
-              people around to set up/take down the wedding teepees and other
-              equipment on the days surrounding the wedding. If you would like
-              to camp and would like help sourcing a tent and other camping
-              gear, we will see what we can do for you. Alternatively, there is
-              a huge amount of accommodation available in the local area. We
-              have attached links to help you find accommodation suited to your
-              needs and budget. If you are unsure of the location, just get in
-              touch to ask us.
-            </p>
-
-            <ul className="booking-links">
-              <li>
-                <span className="icon fa-external-link-square"></span>
-                <a
-                  href="https://www.booking.com/city/gb/newquay.en-gb.html?label=gen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4ARfIAQzYAQHoAQH4AQuIAgGoAgO4AunZkPUFwAIB;sid=282c0fce16b9896c972a50e45c4c6de8;breadcrumb=searchresults_irene;srpvid=2d0257c6938e000a&"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Booking.com
-                </a>
-              </li>
-              <li>
-                <span className="icon fa-external-link-square"></span>
-                <a
-                  href="https://www.airbnb.co.uk/s/Newquay/homes?tab_id=all_tab&refinement_paths%5B%5D=%2Fhomes&query=Newquay&place_id=ChIJh1a5WhEMa0gRY1JU4PEam8Q&source=structured_search_input_header&search_type=search_query"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  AirBnB
-                </a>
-              </li>
-              <li>
-                <span className="icon fa-external-link-square"></span>
-                <a
-                  href="https://www.travelodge.co.uk/hotels/407/Newquay-Seafront-hotel?WT.tsrc=GHA_Organic&utm_campaign=GHA_Newquay%20Seafront&utm_medium=GHA_Organic&utm_source=google"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Travel Lodge
-                </a>
-              </li>
-              <li>
-                <span className="icon fa-external-link-square"></span>
-                <a
-                  href="https://www.premierinn.com/gb/en/hotels/england/cornwall/newquay/newquay-seafront.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Premier Inn
-                </a>
-              </li>
-            </ul>
-            <p className="w-80">
-              *Please note that the Premier Inn in Quintrell Downs is a 10-15
-              minute drive from Newquay centre and not en route for transport
-              back to Newquay on the evening of the wedding
-            </p>
-          </section>
-
-          <section id="more-info" className="main">
-            <header className="major">
-              <h2>More info</h2>
-            </header>
-            <h3>Dresscode</h3>
-            <p>
-              It is a wedding so worth dressing up for but we are happy for you
-              to wear whatever is comfortable. Kilts welcome! Due to the nature
-              of the site, we strongly recommend flat shoes only for your own
-              comfort and safety. The wedding and reception will be held inside
-              giant tepees which will be adequately warm, however, there is lots
-              of outdoor space to enjoy and it may get quite cool in the evening
-              so we recommend taking a warm coat with you. Bedruthan Steps has
-              been officially accredited with Dark Sky Discovery Status, which
-              means that it is away from the worst of any local light pollution
-              and provides excellent stargazing conditions so make sure you are
-              warm enough to enjoy it should the skies be clear enough. If you
-              are local and able to, we encourage you to bring along a blanket
-              or two so we can all keep cosy having a drink around the open
-              fire.
-            </p>
-            <h3>Drinks</h3>
-            <p>
-              We will be providing a free bar of wine, beer, cider and soft
-              drinks for you to enjoy throughout the day and evening. For the
-              evening reception, if you would like to bring any spirits along
-              with you to contribute to the bar, we will provide the mixers,
-              fruit, ice, etc. You will not need to pay for drinks so no need to
-              worry about bringing cash.
-            </p>
-            <h3>Children</h3>
-            <p>
-              Your children are more than welcome on the day. There will be a
-              kids’ play tent available where kids can play together and make
-              friends. Maybe bring a toy along to play with so mum and dad can
-              enjoy a prosecco or five!
-            </p>
           </section>
         </div>
       </Layout>

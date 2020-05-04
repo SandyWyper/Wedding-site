@@ -36,7 +36,6 @@ export default class Map extends Component {
           center={center}
           zoom={11}
           options={controlOptions}
-          // mapTypeId={mapType}
         >
           <Marker
             position={markerPosition}

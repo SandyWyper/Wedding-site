@@ -39,7 +39,8 @@ body,
   background-attachment: fixed;
   background-size: cover;
   background-position: center top;
-
+  object-fit: cover;
+  min-height: 100vh;
   // Prevents animation/transition "flicker" on page load.
   // Automatically added/removed by js/main.js.
   &.is-loading {

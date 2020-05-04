@@ -296,8 +296,24 @@
   }
   img {
     width: 50%;
+    height: 100%;
     @include breakpoint(small) {
       width: 100%;
     }
   }
+}
+.directions-container {
+  display: flex;
+  @include breakpoint(small) {
+    flex-direction: column;
+  }
+  p {
+    padding-left: 2rem;
+    @include breakpoint(small) {
+      padding-left: 0;
+    }
+  }
+}
+.mb-2 {
+  margin-bottom: 2rem;
 }
