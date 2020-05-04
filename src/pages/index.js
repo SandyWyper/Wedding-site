@@ -117,13 +117,13 @@ class Index extends React.Component {
             </header>
             <form
               method="post"
-              name="RSVP"
+              name="RSVP-form"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               action="/thank-you/"
               data-netlify-recaptcha="true"
             >
-              <input type="hidden" name="bot-field" />
+              {/* <input type="hidden" name="bot-field" /> */}
               <div className="field">
                 <label htmlFor="names">Name(s) on the invitation - </label>
                 <input
