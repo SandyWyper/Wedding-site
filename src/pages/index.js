@@ -77,10 +77,10 @@ class Index extends React.Component {
               <div className="content">
                 <header className="major">
                   <h2>Come &amp; Celebrate</h2>
-                  <p>
+                  <p className="courgette">
                     We cordially invite you to join us for a day of
-                    celebrations, to witness the marrage of Miss Jennifer
-                    Simpson and young Master Alexander Wyper.
+                    celebrations, to witness the marrage of Miss
+                    Jennifer&nbsp;Simpson and young Master Alexander&nbsp;Wyper.
                   </p>
                 </header>
                 <p>
@@ -322,7 +322,7 @@ class Index extends React.Component {
                 posuere. Nulla massa urna, fermentum eget quam aliquet.
               </p> */}
             </header>
-            <p className="content">
+            <p className="text-left">
               There will be free camping available onsite for tents or campers
               with toilets and showers available for your use. Camping is
               available from Thursday to Monday but be aware that there will be
