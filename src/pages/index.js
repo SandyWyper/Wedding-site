@@ -34,7 +34,6 @@ class Index extends React.Component {
     }
   }
   handleSubmit = e => {
-    e.preventDefault()
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -42,6 +41,8 @@ class Index extends React.Component {
     })
       .then(this.props.history.push('/thank-you'))
       .catch(error => alert(error))
+
+    e.preventDefault()
   }
   handleChange = event => {
     this.setState({
