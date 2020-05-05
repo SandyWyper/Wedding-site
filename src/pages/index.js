@@ -113,7 +113,7 @@ class Index extends React.Component {
               name="Wedding-RSVP"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              onSunbmit={this.handleSubmit}
+              onSubmit={this.handleSubmit}
             >
               <input type="hidden" name="bot-field" />
               <div className="field">
