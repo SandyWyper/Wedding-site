@@ -14,11 +14,11 @@ import Layout from '../components/layout'
 import Nav from '../components/Nav'
 import Map from '../components/Map'
 
-const encode = data => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
-}
+// const encode = data => {
+//   return Object.keys(data)
+//     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+//     .join('&')
+// }
 
 class Index extends React.Component {
   constructor(props) {
@@ -33,17 +33,17 @@ class Index extends React.Component {
       email: '',
     }
   }
-  handleSubmit = e => {
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'RSVPeas', ...this.state }),
-    })
-      .then(this.props.history.push('/thank-you'))
-      .catch(error => alert(error))
+  // handleSubmit = e => {
+  //   fetch('/', {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  //     body: encode({ 'form-name': 'RSVPeas', ...this.state }),
+  //   })
+  //     .then(this.props.history.push('/thank-you'))
+  //     .catch(error => alert(error))
 
-    e.preventDefault()
-  }
+  //   e.preventDefault()
+  // }
   handleChange = event => {
     this.setState({
       [event.target.name]: event.target.value,
@@ -138,9 +138,9 @@ class Index extends React.Component {
               name="RSVPeas"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              // action="/thank-you/"
+              action="/thank-you/"
               // data-netlify-recaptcha="true"
-              onSubmit={this.handleSubmit}
+              // onSubmit={this.handleSubmit}
             >
               {/* <input type="hidden" name="bot-field" /> */}
               <div className="field">
