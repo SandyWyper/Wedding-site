@@ -32,7 +32,7 @@ export default class Map extends Component {
         preventGoogleFontsLoading
       >
         <GoogleMap
-          id="example-map"
+          id="wedding-location"
           mapContainerStyle={mapContainerStyle}
           center={center}
           zoom={11}

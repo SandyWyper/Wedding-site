@@ -34,15 +34,14 @@ class Index extends React.Component {
     }
   }
   handleSubmit = e => {
+    e.preventDefault()
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'RSVPeas', ...this.state }),
+      body: encode({ 'form-name': 'Wedding-RSVP', ...this.state }),
     })
       .then(this.props.history.push('/thank-you'))
       .catch(error => alert(error))
-
-    e.preventDefault()
   }
   handleChange = event => {
     this.setState({
@@ -76,21 +75,22 @@ class Index extends React.Component {
             <div className="spotlight">
               <div className="content">
                 <header className="major">
-                  <h2>Come &amp; Celebrate</h2>
+                  <h2>Come &amp; Celebrate!</h2>
                   <p className="courgette">
                     We cordially invite you to join us for a day of
-                    celebrations, to witness the marrage of Miss
+                    celebrations, to witness the marriage of Miss
                     Jennifer&nbsp;Simpson and young Master Alexander&nbsp;Wyper.
                   </p>
                 </header>
                 <p>
                   We would be honoured by your presence as we tie the knot,
-                  enjoying wonderful company in a wonderful location, at 1:30pm
-                  on Saturday 5th, June 2021. Sat atop the cliffs on this
-                  stunning bit of coast line, the venue holds a special place
+                  enjoying wonderful company in a wonderful location, from
+                  1:30pm on Saturday 5th, June 2021. Sat atop the cliffs on this
+                  stunning stretch of coastline; the venue holds a special place
                   for both of us, and we cannot think of a better place to share
-                  our big day with you all. There will be celebrations, feasting
-                  and topped off with a ceilidh, so bring your dancing shoes!
+                  our big day with you all. There will be celebrations and
+                  feasting, all topped off with a ceilidh, so bring your dancing
+                  shoes!
                 </p>
                 <div className="venue-shots">
                   <img src={tipiOne} alt="Tipi Tent" />
@@ -109,7 +109,7 @@ class Index extends React.Component {
             </header>
             <form
               method="post"
-              name="RSVPeas"
+              name="Wedding-RSVP"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               onSunbmit={this.handleSubmit}
@@ -183,7 +183,7 @@ class Index extends React.Component {
 
               <div className="field">
                 <label htmlFor="camping">
-                  Will you be camping on site? There's loads of room, and you
+                  Will you be camping on site? There's plenty of room, and you
                   can change your mind nearer the time, but we'd like to get a
                   feel for how many campers will be joining us.
                 </label>
@@ -201,8 +201,8 @@ class Index extends React.Component {
               </div>
               <div className="field half">
                 <label htmlFor="email">
-                  Incase we need to get in touch with any of you nearer the
-                  time. Please leave your eamil address.
+                  In case we need to get in touch with you nearer the time,
+                  please leave your eamil address.
                 </label>
                 <input
                   type="email"
@@ -231,10 +231,10 @@ class Index extends React.Component {
             <p className="text-left">
               The wedding ceremony and reception will take place at Bedruthan
               Steps camping field, just north of the village of Mawgan Porth,
-              near Newquay, Cornwall. You can join us in camping on site, or
-              there will be a shuttle bus running back and forth to Newquay, so
-              you may prefer accomodation along this route. We ask all guests to
-              arrive at 1.30pm, the ceremony will start at 2.00pm.
+              near Newquay, Cornwall. We ask all guests to arrive at 1.30pm, the
+              ceremony will start at 2.00pm. You can join us in camping on site,
+              or there will be a shuttle bus running back to Newquay, so you may
+              prefer accomodation along this route.
             </p>
             <div className="text-image-container">
               <p>
@@ -316,11 +316,6 @@ class Index extends React.Component {
           <section id="accommodation" className="main special">
             <header className="major">
               <h2>Accommodation</h2>
-              {/* <p>
-                Donec imperdiet consequat consequat. Suspendisse feugiat congue
-                <br />
-                posuere. Nulla massa urna, fermentum eget quam aliquet.
-              </p> */}
             </header>
             <p className="text-left">
               There will be free camping available onsite for tents or campers
@@ -384,38 +379,7 @@ class Index extends React.Component {
               back to Newquay on the evening of the wedding
             </p>
           </section>
-          {/* 
-          <section id="more-info" className="main">
-            <header className="major">
-              <h2>More info</h2>
-            </header> */}
-          {/* <h3>Dresscode</h3>
-            <p>
-              It is a wedding so worth dressing up for but we are happy for you
-              to wear whatever is comfortable. Kilts welcome! Due to the nature
-              of the site, we strongly recommend flat shoes only for your own
-              comfort and safety. The wedding and reception will be held inside
-              giant tepees which will be adequately warm, however, there is lots
-              of outdoor space to enjoy and it may get quite cool in the evening
-              so we recommend taking a warm coat with you.
-            </p>
-            <h3>Drinks</h3>
-            <p>
-              We will be providing a free bar of wine, beer, cider and soft
-              drinks for you to enjoy throughout the day and evening. For the
-              evening reception, if you would like to bring any spirits along
-              with you to contribute to the bar, we will provide the mixers,
-              fruit, ice, etc. You will not need to pay for drinks so no need to
-              worry about bringing cash.
-            </p>
-            <h3>Children</h3>
-            <p>
-              Your children are more than welcome on the day. There will be a
-              kids’ play tent available where kids can play together and make
-              friends. Maybe bring a toy along to play with so mum and dad can
-              enjoy a prosecco or five!
-            </p> */}
-          {/* </section> */}
+
           <section id="travel" className="main special">
             <header className="major">
               <h2>Travel</h2>
