@@ -58,6 +58,7 @@ class Index extends React.Component {
   }
 
   render() {
+    console.log(this.state)
     return (
       <Layout>
         <Helmet title="Jenny &amp; Sandy" />
@@ -202,7 +203,7 @@ class Index extends React.Component {
                   onChange={this.handleChange}
                 ></textarea>
               </div>
-              <div className="field-check">
+              {/* <div className="field-check">
                 <label htmlFor="camping">
                   Will you be camping on site? There's loads of room, and you
                   can change your mind nearer the time, but we'd like to get a
@@ -215,8 +216,26 @@ class Index extends React.Component {
                   value={this.state.value}
                   onChange={this.handleChange}
                 ></input>
+              </div> */}
+              <div className="field">
+                <label htmlFor="camping">
+                  {' '}
+                  Will you be camping on site? There's loads of room, and you
+                  can change your mind nearer the time, but we'd like to get a
+                  feel for how many campers will be joining us.
+                </label>
+                <select
+                  value={this.state.value}
+                  onChange={this.handleChange}
+                  name="camping"
+                  id="camping"
+                  required
+                >
+                  <option value="undefined">please select an option</option>
+                  <option value="Yes, camping.">Yes</option>
+                  <option value="Not camping">No</option>
+                </select>
               </div>
-
               <div className="field half">
                 <label htmlFor="email">
                   Incase we need to get in touch with any of you nearer the
