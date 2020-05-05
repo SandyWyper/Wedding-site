@@ -96,32 +96,6 @@ class Index extends React.Component {
                   <img src={tipiOne} alt="Tipi Tent" />
                   <img src={bedSteps} alt="Bedruthen Steps Beach" />
                 </div>
-
-                {/* <p>
-                  The wedding ceremony and reception will take place at
-                  Bedruthan Steps camping field, just outside the village of
-                  Mawgan Porth, near Newquay, Cornwall. This is a gently sloping
-                  grass field with a gravel path alongside. There is access to
-                  Bedruthan Steps beach from the field via 100 metres of the
-                  coast path and 149 steep steps (steps may be closed if there
-                  has been recent rockfall). The postcode for this location is
-                  PL27 7UW and it is situated on the B3276 Newquay-Padstow coast
-                  road. When approaching from Newquay, it is the next left after
-                  the National Trust Carnewas shop and café.
-                </p>
-                <p>
-                  There is free parking onsite at the venue. The site is not
-                  serviced by local public transport so you will need to either
-                  drive or take a taxi to the venue. We will be providing
-                  transport back to Newquay throughout the evening from 7pm.
-                </p> */}
-                {/* <ul className="actions">
-                  <li>
-                    <Link to="/generic" className="button">
-                      Learn More
-                    </Link>
-                  </li>
-                </ul> */}
               </div>
               <span className="image">
                 <img src={pic04} alt="Jenny and Sandy" />
@@ -138,8 +112,6 @@ class Index extends React.Component {
               name="RSVPeas"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              // action="/thank-you/"
-              // data-netlify-recaptcha="true"
               onSunbmit={this.handleSubmit}
             >
               <input type="hidden" name="bot-field" />
@@ -173,20 +145,6 @@ class Index extends React.Component {
                   </option>
                 </select>
               </div>
-              {/* {this.state.attending === "Some can't make it" && (
-                <div className="field">
-                  <label htmlFor="thoseAttending">
-                    Those who will be attending -
-                  </label>
-                  <input
-                    type="text"
-                    name="thoseAttending"
-                    id="thoseAttending"
-                    value={this.state.value}
-                    onChange={this.handleChange}
-                  />
-                </div>
-              )} */}
 
               <div
                 className={
@@ -222,20 +180,7 @@ class Index extends React.Component {
                   onChange={this.handleChange}
                 ></textarea>
               </div>
-              {/* <div className="field-check">
-                <label htmlFor="camping">
-                  Will you be camping on site? There's loads of room, and you
-                  can change your mind nearer the time, but we'd like to get a
-                  feel for how many campers will be joining us.
-                </label>
-                <input
-                  type="checkbox"
-                  name="camping"
-                  id="camping"
-                  value={this.state.value}
-                  onChange={this.handleChange}
-                ></input>
-              </div> */}
+
               <div className="field">
                 <label htmlFor="camping">
                   Will you be camping on site? There's loads of room, and you
@@ -267,10 +212,7 @@ class Index extends React.Component {
                   onChange={this.handleChange}
                 />
               </div>
-              {/* <div className="field">
-                <div />
-                <div data-netlify-recaptcha="true" />
-              </div> */}
+
               <ul className="actions">
                 <li>
                   <input type="submit" value="Send" className="special" />

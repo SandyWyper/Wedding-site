@@ -17,17 +17,18 @@ export default class Map extends Component {
       scaleControl: false,
       streetViewControl: false,
       rotateControl: false,
-      fullscreenControl: false,
+      fullscreenControl: true,
     }
 
     const markerPosition = {
       lat: 50.485,
       lng: -5.03,
     }
+
     return (
       <LoadScript
         id="script-loader"
-        googleMapsApiKey="AIzaSyBhtwSrHckHS6adDzqrVVMObvp1kY2XUuI"
+        googleMapsApiKey={process.env.GATSBY_MAPS_KEY}
         preventGoogleFontsLoading
       >
         <GoogleMap

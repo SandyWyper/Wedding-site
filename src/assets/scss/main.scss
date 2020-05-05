@@ -307,12 +307,18 @@
 }
 .directions-container {
   display: flex;
-  @include breakpoint(small) {
+  align-items: center;
+  @include breakpoint(xsmall) {
     flex-direction: column;
+  }
+  ul {
+    @include breakpoint(xsmall) {
+      width: 100%;
+    }
   }
   p {
     padding-left: 2rem;
-    @include breakpoint(small) {
+    @include breakpoint(xsmall) {
       padding-left: 0;
     }
   }
