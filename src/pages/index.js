@@ -173,7 +173,7 @@ class Index extends React.Component {
                   </option>
                 </select>
               </div>
-              {this.state.attending === "Some can't make it" && (
+              {/* {this.state.attending === "Some can't make it" && (
                 <div className="field">
                   <label htmlFor="thoseAttending">
                     Those who will be attending -
@@ -186,7 +186,26 @@ class Index extends React.Component {
                     onChange={this.handleChange}
                   />
                 </div>
-              )}
+              )} */}
+
+              <div
+                className={
+                  this.state.attending === "Some can't make it"
+                    ? 'field'
+                    : 'field hidden'
+                }
+              >
+                <label htmlFor="thoseAttending">
+                  Those who will be attending -
+                </label>
+                <input
+                  type="text"
+                  name="thoseAttending"
+                  id="thoseAttending"
+                  value={this.state.value}
+                  onChange={this.handleChange}
+                />
+              </div>
 
               <div className="field">
                 <label htmlFor="additionalInfo">
@@ -219,7 +238,6 @@ class Index extends React.Component {
               </div> */}
               <div className="field">
                 <label htmlFor="camping">
-                  {' '}
                   Will you be camping on site? There's loads of room, and you
                   can change your mind nearer the time, but we'd like to get a
                   feel for how many campers will be joining us.
