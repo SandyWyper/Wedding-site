@@ -39,7 +39,7 @@ class Index extends React.Component {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'RSVPlease', ...this.state }),
     })
-      .then(() => alert('Success!'))
+      .then(this.props.history.push('/thank-you'))
       .catch(error => alert(error))
 
     e.preventDefault()
