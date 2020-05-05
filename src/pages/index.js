@@ -37,7 +37,7 @@ class Index extends React.Component {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'RSVPlease', ...this.state }),
+      body: encode({ 'form-name': 'RSVPeas', ...this.state }),
     })
       .then(this.props.history.push('/thank-you'))
       .catch(error => alert(error))
@@ -135,7 +135,7 @@ class Index extends React.Component {
             </header>
             <form
               method="post"
-              name="RSVPlease"
+              name="RSVPeas"
               data-netlify="true"
               // data-netlify-honeypot="bot-field"
               action="/thank-you/"
@@ -267,7 +267,10 @@ class Index extends React.Component {
                   onChange={this.handleChange}
                 />
               </div>
-              <div data-netlify-recaptcha="true" />
+              <div className="field">
+                <div />
+                <div data-netlify-recaptcha="true" />
+              </div>
               <ul className="actions">
                 <li>
                   <input type="submit" value="Send" className="special" />
