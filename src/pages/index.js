@@ -14,6 +14,12 @@ import Layout from '../components/layout'
 import Nav from '../components/Nav'
 import Map from '../components/Map'
 
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
+
 class Index extends React.Component {
   constructor(props) {
     super(props)
@@ -26,6 +32,17 @@ class Index extends React.Component {
       camping: false,
       email: '',
     }
+  }
+  handleSubmit = e => {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'RSVPlease', ...this.state }),
+    })
+      .then(() => alert('Success!'))
+      .catch(error => alert(error))
+
+    e.preventDefault()
   }
   handleChange = event => {
     this.setState({
@@ -117,11 +134,12 @@ class Index extends React.Component {
             </header>
             <form
               method="post"
-              name="RSVP-form"
+              name="RSVPlease"
               data-netlify="true"
-              data-netlify-honeypot="bot-field"
+              // data-netlify-honeypot="bot-field"
               action="/thank-you/"
-              data-netlify-recaptcha="true"
+              // data-netlify-recaptcha="true"
+              onSubmit={this.handleSubmit}
             >
               {/* <input type="hidden" name="bot-field" /> */}
               <div className="field">
