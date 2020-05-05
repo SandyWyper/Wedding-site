@@ -139,7 +139,7 @@ class Index extends React.Component {
               data-netlify="true"
               // data-netlify-honeypot="bot-field"
               action="/thank-you/"
-              // data-netlify-recaptcha="true"
+              data-netlify-recaptcha="true"
               onSubmit={this.handleSubmit}
             >
               {/* <input type="hidden" name="bot-field" /> */}
