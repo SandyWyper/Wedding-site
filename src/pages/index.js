@@ -267,7 +267,7 @@ class Index extends React.Component {
                   onChange={this.handleChange}
                 />
               </div>
-              <div />
+              <div data-netlify-recaptcha="true" />
               <ul className="actions">
                 <li>
                   <input type="submit" value="Send" className="special" />
