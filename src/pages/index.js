@@ -13,6 +13,7 @@ import Header from '../components/Header'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
 import Map from '../components/Map'
+import { navigate } from 'gatsby'
 
 const encode = data => {
   return Object.keys(data)
@@ -35,13 +36,13 @@ class Index extends React.Component {
   }
   handleSubmit = e => {
     e.preventDefault()
-
+    const form = e.target
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'Wedding-RSVP', ...this.state }),
+      body: encode({ 'form-name': form.getAttribute('name'), ...this.state }),
     })
-      .then(this.props.history.push('/thank-you'))
+      .then(() => navigate(form.getAttribute('action')))
       .catch(error => alert(error))
   }
   handleChange = event => {
@@ -104,7 +105,7 @@ class Index extends React.Component {
             </div>
           </section>
 
-          <section id="RSVP" className="main special">
+          {/* <section id="RSVP" className="main special">
             <header className="major">
               <h2>RSVP</h2>
             </header>
@@ -116,6 +117,133 @@ class Index extends React.Component {
               onSubmit={this.handleSubmit}
             >
               <input type="hidden" name="bot-field" />
+              <div className="field">
+                <label htmlFor="names">Name(s) on the invitation - </label>
+                <input
+                  type="text"
+                  name="names"
+                  id="names"
+                  value={this.state.value}
+                  onChange={this.handleChange}
+                  required
+                />
+              </div>
+              <div className="field">
+                <label htmlFor="attending">Please select one - </label>
+                <select
+                  value={this.state.value}
+                  onChange={this.handleChange}
+                  name="attending"
+                  id="attending"
+                  required
+                >
+                  <option value="undefined">please select an option</option>
+                  <option value="All will attend">We'll be there!</option>
+                  <option value="We can't make it">
+                    Sorry, we can't make it.
+                  </option>
+                  <option value="Some can't make it">
+                    Some of us can't make it.
+                  </option>
+                </select>
+              </div>
+
+              <div
+                className={
+                  this.state.attending === "Some can't make it"
+                    ? 'field'
+                    : 'field hidden'
+                }
+              >
+                <label htmlFor="thoseAttending">
+                  Those who will be attending -
+                </label>
+                <input
+                  type="text"
+                  name="thoseAttending"
+                  id="thoseAttending"
+                  value={this.state.value}
+                  onChange={this.handleChange}
+                />
+              </div>
+
+              <div className="field">
+                <label htmlFor="additionalInfo">
+                  If you have any dietary requirements, please state what they
+                  are and who they apply to. If you have small children that
+                  need a highchair, we can rent one for you, just let us know
+                  how many you need.
+                </label>
+                <textarea
+                  name="additionalInfo"
+                  id="additionalInfo"
+                  rows="4"
+                  value={this.state.value}
+                  onChange={this.handleChange}
+                ></textarea>
+              </div>
+
+              <div className="field">
+                <label htmlFor="camping">
+                  Will you be camping on site? There's plenty of room, and you
+                  can change your mind nearer the time, but we'd like to get a
+                  feel for how many campers will be joining us.
+                </label>
+                <select
+                  value={this.state.value}
+                  onChange={this.handleChange}
+                  name="camping"
+                  id="camping"
+                  required
+                >
+                  <option value="undefined">please select an option</option>
+                  <option value="Yes, camping.">Yes</option>
+                  <option value="Not camping">No</option>
+                </select>
+              </div>
+              <div className="field half">
+                <label htmlFor="email">
+                  In case we need to get in touch with you nearer the time,
+                  please leave your eamil address.
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  value={this.state.value}
+                  onChange={this.handleChange}
+                />
+              </div>
+
+              <ul className="actions">
+                <li>
+                  <input type="submit" value="Send" className="special" />
+                </li>
+                <li>
+                  <input type="reset" value="Reset" />
+                </li>
+              </ul>
+            </form>
+          </section> */}
+
+          <section id="RSVP" className="main special">
+            <header className="major">
+              <h2>RSVP</h2>
+            </header>
+            <form
+              method="post"
+              name="Wedding-RSVP"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={this.handleSubmit}
+              action="/thank-you/"
+            >
+              <input type="hidden" name="form-name" value="Wedding-RSVP" />
+              <input
+                type="hidden"
+                name="bot-field"
+                onChange={this.handleChange}
+              />
               <div className="field">
                 <label htmlFor="names">Name(s) on the invitation - </label>
                 <input
