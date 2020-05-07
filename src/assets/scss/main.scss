@@ -264,21 +264,21 @@
   @include breakpoint(xsmall) {
     flex-direction: column;
   }
-  img:first-child {
+  .img:first-child {
     padding-right: 0.5rem;
     @include breakpoint(xsmall) {
       padding-right: 0;
       padding-bottom: 1rem;
     }
   }
-  img:last-child {
+  .img:last-child {
     padding-left: 0.5rem;
     @include breakpoint(xsmall) {
       padding-left: 0;
       padding-bottom: 1rem;
     }
   }
-  img {
+  .img {
     width: 50%;
     @include breakpoint(xsmall) {
       width: 100%;
@@ -288,7 +288,7 @@
 .text-image-container {
   display: flex;
   margin-bottom: 2rem;
-  @include breakpoint(small) {
+  @include breakpoint(medium) {
     flex-direction: column;
   }
   p {
@@ -296,14 +296,14 @@
     width: 50%;
     padding-right: 1rem;
     width: 50%;
-    @include breakpoint(small) {
+    @include breakpoint(medium) {
       width: 100%;
     }
   }
-  img {
+  .img {
     width: 50%;
     height: 100%;
-    @include breakpoint(small) {
+    @include breakpoint(medium) {
       width: 100%;
     }
   }

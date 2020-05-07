@@ -5,9 +5,9 @@ import { Waypoint } from 'react-waypoint'
 // import pic01 from '../assets/images/all-smart.png'
 // import pic02 from '../assets/images/[S+J].png'
 // import pic03 from '../assets/images/US2.png'
-import tipiOne from '../assets/images/tipi-1.jpg'
+// import tipiOne from '../assets/images/tipi-1.jpg'
 import tipiTwo from '../assets/images/tipi-2.jpg'
-import bedSteps from '../assets/images/bed-steps.jpg'
+// import bedSteps from '../assets/images/bed-steps.jpg'
 import pic04 from '../assets/images/smootchin.jpg'
 import Header from '../components/Header'
 import Layout from '../components/layout'
@@ -15,11 +15,40 @@ import Nav from '../components/Nav'
 import Map from '../components/Map'
 import { navigate } from 'gatsby'
 
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
+
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
 }
+
+export const query = graphql`
+  query {
+    tipiOne: file(relativePath: { eq: "tipi-1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 500, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    tipiTwo: file(relativePath: { eq: "tipi-2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 800, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    bedSteps: file(relativePath: { eq: "bed-steps.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 500, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 class Index extends React.Component {
   constructor(props) {
@@ -58,8 +87,7 @@ class Index extends React.Component {
     this.setState(() => ({ stickyNav: true }))
   }
 
-  render() {
-    console.log(this.state)
+  render(props) {
     return (
       <Layout>
         <Helmet title="Jenny &amp; Sandy" />
@@ -95,8 +123,19 @@ class Index extends React.Component {
                   shoes!
                 </p>
                 <div className="venue-shots">
-                  <img src={tipiOne} alt="Tipi Tent" />
-                  <img src={bedSteps} alt="Bedruthen Steps Beach" />
+                  {console.log(this.props)}
+                  <div className="img">
+                    <Img
+                      fluid={this.props.data.tipiOne.childImageSharp.fluid}
+                      alt="Wild Tipis"
+                    />
+                  </div>
+                  <div className="img">
+                    <Img
+                      fluid={this.props.data.bedSteps.childImageSharp.fluid}
+                      alt="Bedruthen Steps Beach"
+                    />
+                  </div>
                 </div>
               </div>
               <span className="image">
@@ -104,127 +143,6 @@ class Index extends React.Component {
               </span>
             </div>
           </section>
-
-          {/* <section id="RSVP" className="main special">
-            <header className="major">
-              <h2>RSVP</h2>
-            </header>
-            <form
-              method="post"
-              name="Wedding-RSVP"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              onSubmit={this.handleSubmit}
-            >
-              <input type="hidden" name="bot-field" />
-              <div className="field">
-                <label htmlFor="names">Name(s) on the invitation - </label>
-                <input
-                  type="text"
-                  name="names"
-                  id="names"
-                  value={this.state.value}
-                  onChange={this.handleChange}
-                  required
-                />
-              </div>
-              <div className="field">
-                <label htmlFor="attending">Please select one - </label>
-                <select
-                  value={this.state.value}
-                  onChange={this.handleChange}
-                  name="attending"
-                  id="attending"
-                  required
-                >
-                  <option value="undefined">please select an option</option>
-                  <option value="All will attend">We'll be there!</option>
-                  <option value="We can't make it">
-                    Sorry, we can't make it.
-                  </option>
-                  <option value="Some can't make it">
-                    Some of us can't make it.
-                  </option>
-                </select>
-              </div>
-
-              <div
-                className={
-                  this.state.attending === "Some can't make it"
-                    ? 'field'
-                    : 'field hidden'
-                }
-              >
-                <label htmlFor="thoseAttending">
-                  Those who will be attending -
-                </label>
-                <input
-                  type="text"
-                  name="thoseAttending"
-                  id="thoseAttending"
-                  value={this.state.value}
-                  onChange={this.handleChange}
-                />
-              </div>
-
-              <div className="field">
-                <label htmlFor="additionalInfo">
-                  If you have any dietary requirements, please state what they
-                  are and who they apply to. If you have small children that
-                  need a highchair, we can rent one for you, just let us know
-                  how many you need.
-                </label>
-                <textarea
-                  name="additionalInfo"
-                  id="additionalInfo"
-                  rows="4"
-                  value={this.state.value}
-                  onChange={this.handleChange}
-                ></textarea>
-              </div>
-
-              <div className="field">
-                <label htmlFor="camping">
-                  Will you be camping on site? There's plenty of room, and you
-                  can change your mind nearer the time, but we'd like to get a
-                  feel for how many campers will be joining us.
-                </label>
-                <select
-                  value={this.state.value}
-                  onChange={this.handleChange}
-                  name="camping"
-                  id="camping"
-                  required
-                >
-                  <option value="undefined">please select an option</option>
-                  <option value="Yes, camping.">Yes</option>
-                  <option value="Not camping">No</option>
-                </select>
-              </div>
-              <div className="field half">
-                <label htmlFor="email">
-                  In case we need to get in touch with you nearer the time,
-                  please leave your eamil address.
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  value={this.state.value}
-                  onChange={this.handleChange}
-                />
-              </div>
-
-              <ul className="actions">
-                <li>
-                  <input type="submit" value="Send" className="special" />
-                </li>
-                <li>
-                  <input type="reset" value="Reset" />
-                </li>
-              </ul>
-            </form>
-          </section> */}
 
           <section id="RSVP" className="main special">
             <header className="major">
@@ -378,7 +296,12 @@ class Index extends React.Component {
                 winter so the steps remain closed at the moment. There's no
                 shortages of beaches nearby.
               </p>
-              <img src={tipiTwo} alt="Wild Tipis" />
+              <Img
+                fluid={this.props.data.tipiTwo.childImageSharp.fluid}
+                alt="Wild Tipis"
+                className="img"
+              />
+              {/* <img src={tipiTwo} alt="Wild Tipis" /> */}
             </div>
 
             <p className="text-left">
