@@ -29,21 +29,21 @@ export const query = graphql`
     tipiOne: file(relativePath: { eq: "tipi-1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 400, quality: 75) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     tipiTwo: file(relativePath: { eq: "tipi-2.jpg" }) {
       childImageSharp {
         fluid(sizes: "(min-width:980px)40vw,90vw") {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     bedSteps: file(relativePath: { eq: "bed-steps.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 400, quality: 75) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
