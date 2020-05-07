@@ -8,7 +8,7 @@ import { Waypoint } from 'react-waypoint'
 // import tipiOne from '../assets/images/tipi-1.jpg'
 import tipiTwo from '../assets/images/tipi-2.jpg'
 // import bedSteps from '../assets/images/bed-steps.jpg'
-import pic04 from '../assets/images/smootchin.jpg'
+import pic04 from '../assets/images/smootchin1.jpg'
 import Header from '../components/Header'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
@@ -28,7 +28,7 @@ export const query = graphql`
   query {
     tipiOne: file(relativePath: { eq: "tipi-1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 500) {
+        fluid(maxWidth: 400, quality: 75) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -42,7 +42,7 @@ export const query = graphql`
     }
     bedSteps: file(relativePath: { eq: "bed-steps.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 500) {
+        fluid(maxWidth: 400, quality: 75) {
           ...GatsbyImageSharpFluid
         }
       }
