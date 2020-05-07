@@ -35,7 +35,11 @@ export const query = graphql`
     }
     tipiTwo: file(relativePath: { eq: "tipi-2.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 800, quality: 100) {
+        fluid(
+          maxWidth: 800
+          quality: 100
+          sizes: "(min-width:980px)40vw,100vw"
+        ) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -123,7 +127,6 @@ class Index extends React.Component {
                   shoes!
                 </p>
                 <div className="venue-shots">
-                  {console.log(this.props)}
                   <div className="img">
                     <Img
                       fluid={this.props.data.tipiOne.childImageSharp.fluid}
