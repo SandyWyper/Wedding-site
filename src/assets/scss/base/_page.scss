@@ -32,9 +32,22 @@ body,
     (
       // 'url("../images/overlay.png")',
         // 'linear-gradient(45deg, #{_palette(bg1)} 15%, #{_palette(bg2) 85%})',
-        'url("../images/bed-steps-amended.jpg")'
+        // 'url("../images/bed-steps-amended.jpg")'
+        // 'url("../images/background-1440-90.jpg")'
+        // 'url("../images/background-1440-80.jpg")'
+        // 'url("../images/background-cropped-90.jpg")'
+        // 'url("../images/background-narrow-faded-90.jpg")'
+        // 'url("../images/background-narrow-faded-small-90.jpg")'
+        // 'url("../images/background-cropped-lighten-90.jpg")'
+        'url("../images/background-narrow-faded-70.jpg")'
     )
   );
+  @include breakpoint(xsmall) {
+    @include vendor(
+      'background-image',
+      ('url("../images/background-mobile-90.jpg")')
+    );
+  }
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
