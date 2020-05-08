@@ -48,15 +48,17 @@ body,
   background-image: url('../images/background-new-light-60.jpg');
   // background-image: url('../images/background-new-70.jpg');
   @include breakpoint(xsmall) {
-    @include vendor(
-      'background-image',
-      ('url("../images/background-mobile-90.jpg")')
-    );
+    background-image: url('../images/background-mobile-90.jpg');
+    // @include vendor(
+    //   'background-image',
+    //   ('url("../images/background-mobile-90.jpg")')
+    // );
   }
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center top;
+  -o-object-fit: cover;
   object-fit: cover;
   min-height: 100vh;
   // Prevents animation/transition "flicker" on page load.
