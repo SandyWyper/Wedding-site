@@ -26,6 +26,7 @@ body {
 
 body,
 .body {
+  position: static;
   background-color: _palette(bg);
   // @include vendor(
   //   'background-image',
@@ -58,8 +59,8 @@ body,
   background-attachment: fixed;
   background-size: cover;
   background-position: center top;
-  -o-object-fit: cover;
-  object-fit: cover;
+  // -o-object-fit: cover;
+  // object-fit: cover;
   min-height: 100vh;
   // Prevents animation/transition "flicker" on page load.
   // Automatically added/removed by js/main.js.
