@@ -28,8 +28,16 @@
 .body {
   position: static;
   background-color: _palette(bg);
-  // @include vendor(
-  //   'background-image',
+  @include vendor(
+    'background-image',
+    'url("../images/background-new-light-60.jpg")'
+  );
+  @include vendor('background-repeat', 'no-repeat');
+  @include vendor('background-size', 'cover');
+  @include vendor('background-position', '50% 100%');
+  @include vendor('background-attachment', 'fixed');
+  @include vendor('transform', 'translate3d(0,0,0)');
+  min-height: 100vh;
   //   (
   //     // 'url("../images/overlay.png")',
   //       // 'linear-gradient(45deg, #{_palette(bg1)} 15%, #{_palette(bg2) 85%})',
@@ -46,24 +54,12 @@
   // );
   // background-image: url('../images/background-new-75.jpg');
   // background-image: url('../images/bed-steps-amended.jpg');
-  background-image: url('../images/background-new-light-60.jpg');
+  // background-image: url('../images/background-new-light-60.jpg');
   // background-image: url('../images/background-new-70.jpg');
   @include breakpoint(xsmall) {
     background-image: url('../images/background-mobile-90.jpg');
-    // @include vendor(
-    //   'background-image',
-    //   ('url("../images/background-mobile-90.jpg")')
-    // );
   }
-  background-repeat: no-repeat;
-  background-attachment: fixed, fixed;
-  background-size: cover;
-  background-position: 50% 100%;
-  transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  // -o-object-fit: cover;
-  // object-fit: cover;
-  min-height: 100vh;
+
   // Prevents animation/transition "flicker" on page load.
   // Automatically added/removed by js/main.js.
   &.is-loading {
