@@ -275,25 +275,25 @@ class Index extends React.Component {
               <h2>The Venue</h2>
             </header>
             <p className="text-left">
-              The wedding ceremony and reception will take place at Bedruthan
-              Steps camping field, just north of the village of Mawgan Porth,
-              near Newquay, Cornwall. We ask all guests to arrive at 1.30pm, the
-              ceremony will start at 2.00pm. You can join us in camping on site,
-              or there will be a shuttle bus running back to Newquay, so you may
-              prefer accomodation along this route.
+              The wedding ceremony and reception will take place in giant
+              teepees at Bedruthan Steps camping field, just north of the
+              village of Mawgan Porth, near Newquay, Cornwall. We ask all guests
+              to arrive at 1.30pm, the ceremony will start at 2.00pm. You can
+              join us in camping on site, or there will be a shuttle bus running
+              back to Newquay, so you may prefer accomodation along this route.
             </p>
             <div className="text-image-container">
               <p>
-                Although this coast can have stunning weather it is rather
-                exposed, so we recomend coming prepared. It can be blistering
-                hot, or if the wind comes from the north it can be a bit chilly.
-                Especially in the evening, so make sure to bring layers. The
-                tents are huge, so if the heavens were to open then we should
-                all remain dry and have a great view all the same. If you're
-                camping, there are toilets, showers and running water. The field
-                is right above the beach, however there was a rock slide in the
-                winter so the steps remain closed at the moment. There's no
-                shortages of beaches nearby.
+                Although this coast can have stunning weather, it is rather
+                exposed so we recommend coming prepared. It can be blistering
+                hot or, if the wind comes from the north, it can be a bit
+                chilly, especially in the evening so make sure to bring layers.
+                Due to the nature of the site, we strongly recommend flat shoes
+                for your own comfort and safety (and ceilidh dancing). The tents
+                are huge, so if the heavens were to open then we should all
+                remain warm and dry and have a great view all the same. The
+                field is right above the beach, however there was a rock slide
+                in the winter so the steps remain closed at the moment.
               </p>
               <Img
                 fluid={this.props.data.tipiTwo.childImageSharp.fluid}
@@ -308,9 +308,7 @@ class Index extends React.Component {
               Discovery Status, which means that it is away from the worst of
               any local light pollution and provides excellent stargazing
               conditions so make sure you are warm enough to enjoy it should the
-              skies be clear enough. If you are local and able to, we encourage
-              you to bring along a blanket or two so we can all keep cosy having
-              a drink around the open fire.
+              skies be clear enough.
             </p>
             <div className="directions-container">
               <ul className="actions">
@@ -338,12 +336,10 @@ class Index extends React.Component {
               <h3>Dresscode</h3>
               <p>
                 It is a wedding so worth dressing up for but we are happy for
-                you to wear whatever is comfortable. Kilts welcome! Due to the
-                nature of the site, we strongly recommend flat shoes only for
-                your own comfort and safety. The wedding and reception will be
-                held inside giant tepees which will be adequately warm, however,
-                there is lots of outdoor space to enjoy and it may get quite
-                cool in the evening so we recommend taking a warm coat with you.
+                you to wear whatever is comfortable. Kilts welcome! Remember to
+                wear (or at least bring) flat shoes and a warm coat. If you are
+                local and able to, we encourage you to bring along a blanket or
+                two so we can all keep cosy having a drink around the open fire.
               </p>
               <h3>Drinks</h3>
               <p>
@@ -370,18 +366,37 @@ class Index extends React.Component {
             </header>
             <p className="text-left">
               There will be free camping available onsite for tents or campers
-              with toilets and showers available for your use. Camping is
-              available from Thursday to Monday but be aware that there will be
-              people around to set up/take down the wedding teepees and other
-              equipment on the days surrounding the wedding. If you would like
-              to camp and would like help sourcing a tent and other camping
-              gear, we will see what we can do for you. Alternatively, there is
-              a huge amount of accommodation available in the local area. We
-              have attached links to help you find accommodation suited to your
-              needs and budget. If you are unsure of the location, just get in
-              touch to ask us.
+              with toilets, showers and running water available for your use.
+              Camping is available from Thursday to Monday but be aware that
+              there will be people around to set up/take down the wedding
+              teepees and other equipment on the days surrounding the wedding.
+              If you would like to camp and would like help sourcing a tent and
+              other camping gear, we will see what we can do for you. We can
+              also recommend a glamping tent hire company,{' '}
+              <a
+                href="http://www.ysellacornwall.co.uk"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ysella Glamping
+              </a>
+              , who can provide and set everything up for you.
             </p>
-
+            <p className="text-left">
+              Alternatively, there is a huge amount of accommodation available
+              in the local area. Newquay is where we live and the travel hub for
+              this part of Cornwall. There is the biggest selection of
+              accommodation in Newquay, but the areas of Watergate Bay and
+              Mawgan Porth also have accommodation and will be closer to the
+              wedding venue but have less in the way of amenities. If you need
+              any help whilst booking travel or accommodation, we are happy to
+              give you advice.
+            </p>
+            <p className="text-left">
+              We have attached links to help you find accommodation suited to
+              your needs and budget. If you are unsure of the location, just get
+              in touch to ask us.
+            </p>
             <ul className="booking-links">
               <li>
                 <span className="icon fa-external-link-square"></span>
@@ -427,7 +442,9 @@ class Index extends React.Component {
             <p className="w-80">
               *Please note that the Premier Inn in Quintrell Downs is a 10-15
               minute drive from Newquay centre and not en route for transport
-              back to Newquay on the evening of the wedding
+              back to Newquay on the evening of the wedding. The Premier Inn
+              Seafront, however, is close to the centre of Newquay and on the
+              shuttle route.
             </p>
           </section>
 
@@ -435,14 +452,6 @@ class Index extends React.Component {
             <header className="major">
               <h2>Travel</h2>
             </header>
-            <p className="text-left">
-              Newquay is where we live and the travel hub for this part of
-              Cornwall. There is the biggest selection of accommodation in
-              Newquay, but the areas of Watergate Bay and Mawgan Porth also have
-              accommodation and will be closer to the wedding venue but have
-              less in the way of amenities. If you need any help whilst booking
-              travel or accommodation, we are happy to give you advice.
-            </p>
 
             <div>
               <div className="travel-option">
@@ -461,20 +470,6 @@ class Index extends React.Component {
               </div>
               <div className="travel-option">
                 <div className="travel-title">
-                  <h3>By Car</h3>
-                </div>
-                <div className="travel-body">
-                  <p>
-                    The main motorway to Cornwall is the M5 serving Exeter,
-                    Bristol and all points North whilst from London the choice
-                    is the mainly dual carriageway A303/A30 or the M4/M5 via
-                    Bristol. From Exeter follow the A30 to Cornwall and Newquay
-                    is fully signposted from the A30.
-                  </p>
-                </div>
-              </div>
-              <div className="travel-option">
-                <div className="travel-title">
                   <h3>By Train</h3>
                 </div>
                 <div className="travel-body">
@@ -482,17 +477,11 @@ class Index extends React.Component {
                     Newquay is on its own branch line, the Par to Newquay
                     Atlantic Coast Line. Par is the connection to the ‘Plymouth
                     to Penzance’ main line and is just outside St Austell, on
-                    the Cornish south coast. The Plymouth to Penzance mainline
-                    then connects country wide. In the summer, normally from the
-                    end of May to the end of September, Newquay has direct
-                    trains from London, Bristol, Birmingham, Yorkshire, the
-                    North East and Scotland. Great value fares can be found if
-                    you book in advance, the earlier you book the more you save.
-                    The railway station is located in the heart of the town on
-                    Cliff Road. The train station is seasonally manned and does
-                    not have an automated ticket machine so when the ticket
-                    office is not open, tickets can be bought either on the
-                    train or online.
+                    the Cornish south coast. The railway station is located in
+                    the heart of the town on Cliff Road. The train station is
+                    seasonally manned and does not have an automated ticket
+                    machine so when the ticket office is not open, tickets can
+                    be bought either on the train or online.
                   </p>
                 </div>
               </div>
@@ -504,12 +493,9 @@ class Index extends React.Component {
                   <p>
                     Newquay is part of the National Express network and the main
                     stop is at Newquay Bus Station on Manor Road, just off the
-                    town centre and right behind our house. There is a secondary
-                    stop at Porth Four Turns on Henver Road but this is for
-                    passengers with hand luggage only as the vehicle cannot stop
-                    long enough to open its main luggage compartment. The
-                    Megabus coach service has a stop at Newquay bus station but
-                    this can only be booked in advance through their website.
+                    town centre and right behind our house. The Megabus coach
+                    service has a stop at Newquay bus station but this can only
+                    be booked in advance through their website.
                   </p>
                 </div>
               </div>
