@@ -12,9 +12,9 @@
 }
 
 // MSIE: Prevents scrollbar from overlapping content.
-body {
-  -ms-overflow-style: scrollbar;
-}
+// body {
+//   -ms-overflow-style: scrollbar;
+// }
 
 // Ensures page width is always >=320px.
 @include breakpoint(xsmall) {
@@ -56,7 +56,7 @@ body {
     // );
   }
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed, fixed;
   background-size: cover;
   background-position: 50% 100%;
   // -o-object-fit: cover;
