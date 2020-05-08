@@ -324,9 +324,9 @@ class Index extends React.Component {
                 </li>
               </ul>
               <p className="text-left">
-                The shutle bus will be running from around 7pm onwards, but we
+                The shuttle bus will be running from around 7pm onwards, but we
                 ask that you make your own way to the venue. It's about a 15
-                minitue drive from Newquay.
+                minute drive from Newquay.
               </p>
             </div>
             <div className="mb-2">
