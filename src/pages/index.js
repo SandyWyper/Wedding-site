@@ -108,7 +108,7 @@ class Index extends React.Component {
                 <p>
                   We would be honoured by your presence as we tie the knot,
                   enjoying wonderful company in a wonderful location, from
-                  1:30pm on Saturday 5th, June 2021. Sat atop the cliffs on this
+                  1:30pm on Saturday 5th June 2021. Sat atop the cliffs on this
                   stunning stretch of coastline; the venue holds a special place
                   for both of us, and we cannot think of a better place to share
                   our big day with you all. There will be celebrations and
