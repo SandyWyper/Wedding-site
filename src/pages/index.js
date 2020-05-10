@@ -1,9 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { Waypoint } from 'react-waypoint'
-// import pic01 from '../assets/images/all-smart.png'
-// import pic02 from '../assets/images/[S+J].png'
-// import pic03 from '../assets/images/US2.png'
 import pic04 from '../assets/images/smootchin1.jpg'
 import Header from '../components/Header'
 import Layout from '../components/layout'
@@ -37,6 +34,13 @@ export const query = graphql`
       }
     }
     bedSteps: file(relativePath: { eq: "bed-steps.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 400, quality: 75) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    smootchin: file(relativePath: { eq: "smootchin1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 400, quality: 75) {
           ...GatsbyImageSharpFluid_withWebp
@@ -134,6 +138,10 @@ class Index extends React.Component {
                 </div>
               </div>
               <span className="image">
+                {/* <Img
+                  fluid={this.props.data.smootchin.childImageSharp.fluid}
+                  alt="Jenny and Sandy"
+                /> */}
                 <img src={pic04} alt="Jenny and Sandy" />
               </span>
             </div>

@@ -1,5 +1,7 @@
 import React from 'react'
 import '../assets/scss/main.scss'
+import background from '../assets/images/background-new-light-60.jpg'
+import mobileBackground from '../assets/images/background-mobile-90.jpg'
 
 class Template extends React.Component {
   constructor(props) {
@@ -26,9 +28,23 @@ class Template extends React.Component {
 
     return (
       <div className={`body ${this.state.loading}`}>
+        <picture>
+          <source srcSet={mobileBackground} media="(max-width: 450px)" />
+          {/* <source srcset={background}  /> */}
+          <img className="background" src={background} alt="logo" />
+        </picture>
+        {/* <img
+          src={background}
+          style={{
+            height: '100vh',
+            position: 'fixed',
+            zIndex: '-3000',
+            objectFift: 'cover',
+          }}
+        /> */}
+
         <div id="wrapper">
           {children}
-          {/* <Footer /> */}
           <div className="footer-spacing" />
         </div>
       </div>

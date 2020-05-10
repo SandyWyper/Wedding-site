@@ -12,9 +12,9 @@
 }
 
 // MSIE: Prevents scrollbar from overlapping content.
-// body {
-//   -ms-overflow-style: scrollbar;
-// }
+body {
+  -ms-overflow-style: scrollbar;
+}
 
 // Ensures page width is always >=320px.
 @include breakpoint(xsmall) {
@@ -23,21 +23,31 @@
     min-width: 320px;
   }
 }
-
+.background {
+  @include vendor('object-fit', 'cover');
+  min-height: 100vh;
+  position: fixed;
+  width: 100%;
+  z-index: -2000;
+}
 // body,
 .body {
-  position: static;
-  background-color: _palette(bg);
-  @include vendor(
-    'background-image',
-    'url("../images/background-new-light-60.jpg")'
-  );
-  @include vendor('background-repeat', 'no-repeat');
-  @include vendor('background-size', 'cover');
-  @include vendor('background-position', '50% 100%');
-  @include vendor('background-attachment', 'fixed');
-  @include vendor('transform', 'translate3d(0,0,0)');
-  min-height: 100vh;
+  // position: static;
+  // background-color: #5f5f5f5f;
+  // @include vendor(
+  //   'background-image',
+  //   'url("../images/background-new-light-60.jpg")'
+  //   );
+  //   @include vendor('background-repeat', 'no-repeat');
+  //   @include vendor('background-size', 'cover');
+  //   @include vendor('background-position', '50% 100%');
+  //   @include vendor('background-attachment', 'fixed');
+  //   @include vendor('transform', 'translate3d(0,0,0)');
+  //   min-height: 100vh;
+  //   @include breakpoint(xsmall) {
+  //     background-image: url('../images/background-mobile-90.jpg');
+  //   }
+
   //   (
   //     // 'url("../images/overlay.png")',
   //       // 'linear-gradient(45deg, #{_palette(bg1)} 15%, #{_palette(bg2) 85%})',
@@ -56,9 +66,6 @@
   // background-image: url('../images/bed-steps-amended.jpg');
   // background-image: url('../images/background-new-light-60.jpg');
   // background-image: url('../images/background-new-70.jpg');
-  @include breakpoint(xsmall) {
-    background-image: url('../images/background-mobile-90.jpg');
-  }
 
   // Prevents animation/transition "flicker" on page load.
   // Automatically added/removed by js/main.js.
