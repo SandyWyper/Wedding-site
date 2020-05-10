@@ -30,19 +30,8 @@ class Template extends React.Component {
       <div className={`body ${this.state.loading}`}>
         <picture>
           <source srcSet={mobileBackground} media="(max-width: 450px)" />
-          {/* <source srcset={background}  /> */}
           <img className="background" src={background} alt="logo" />
         </picture>
-        {/* <img
-          src={background}
-          style={{
-            height: '100vh',
-            position: 'fixed',
-            zIndex: '-3000',
-            objectFift: 'cover',
-          }}
-        /> */}
-
         <div id="wrapper">
           {children}
           <div className="footer-spacing" />

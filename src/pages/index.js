@@ -40,13 +40,6 @@ export const query = graphql`
         }
       }
     }
-    smootchin: file(relativePath: { eq: "smootchin1.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 400, quality: 75) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
   }
 `
 
@@ -138,10 +131,6 @@ class Index extends React.Component {
                 </div>
               </div>
               <span className="image">
-                {/* <Img
-                  fluid={this.props.data.smootchin.childImageSharp.fluid}
-                  alt="Jenny and Sandy"
-                /> */}
                 <img src={pic04} alt="Jenny and Sandy" />
               </span>
             </div>
@@ -252,7 +241,7 @@ class Index extends React.Component {
               <div className="field half">
                 <label htmlFor="email">
                   In case we need to get in touch with you nearer the time,
-                  please leave your eamil address.
+                  please leave your email address.
                 </label>
                 <input
                   type="email"
