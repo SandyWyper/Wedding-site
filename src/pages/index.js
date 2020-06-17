@@ -239,7 +239,7 @@ class Index extends React.Component {
                   <option value="Not camping">No</option>
                 </select>
               </div>
-              <div className="field half">
+              <div className="field">
                 <label htmlFor="email">
                   In case we need to get in touch with you nearer the time,
                   please leave your email address.
@@ -248,6 +248,16 @@ class Index extends React.Component {
                   type="email"
                   name="email"
                   id="email"
+                  value={this.state.value}
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className="field">
+                <label htmlFor="song">Suggest a song - </label>
+                <input
+                  type="text"
+                  name="song"
+                  id="song"
                   value={this.state.value}
                   onChange={this.handleChange}
                 />
