@@ -105,15 +105,15 @@ class Index extends React.Component {
                     Jennifer&nbsp;Simpson and young Master Alexander&nbsp;Wyper.
                   </p>
                 </header>
-                <p>
+                <p className="text-left">
                   We would be honoured by your presence as we tie the knot,
                   enjoying wonderful company in a wonderful location, from
-                  1:30pm on Saturday 5th June 2021. Sat atop the cliffs on this
-                  stunning stretch of coastline; the venue holds a special place
-                  for both of us, and we cannot think of a better place to share
-                  our big day with you all. There will be celebrations and
-                  feasting, all topped off with a ceilidh, so bring your dancing
-                  shoes!
+                  1:30pm on Saturday 5th June 2021.
+                  <br /> Sat atop the cliffs on this stunning stretch of
+                  coastline; the venue holds a special place for both of us, and
+                  we cannot think of a better place to share our big day with
+                  you all. There will be celebrations and feasting, all topped
+                  off with a ceilidh - so bring your dancing shoes!
                 </p>
                 <div className="venue-shots">
                   <div className="img">
@@ -343,7 +343,7 @@ class Index extends React.Component {
                 you to wear whatever is comfortable. Kilts welcome! Remember to
                 wear (or at least bring) flat shoes and a warm coat. If you are
                 local and able to, we encourage you to bring along a blanket or
-                two so we can all keep cosy having a drink around the open fire.
+                two so we can all keep cosy having a drink around an open fire.
               </p>
               <h3>Drinks</h3>
               <p>
@@ -369,14 +369,14 @@ class Index extends React.Component {
               <h2>Accommodation</h2>
             </header>
             <p className="text-left">
-              There will be free camping available onsite for tents or campers
-              with toilets, showers and running water available for your use.
-              Camping is available from Thursday to Monday but be aware that
-              there will be people around to set up/take down the wedding
-              teepees and other equipment on the days surrounding the wedding.
-              If you would like to camp and would like help sourcing a tent and
-              other camping gear, we will see what we can do for you. We can
-              also recommend a glamping tent hire company,{' '}
+              There will be free camping available onsite for tents or
+              campervans, with toilets, showers and running water available for
+              your use. Camping is available from Thursday to Monday but be
+              aware that there will be people around to set up/take down the
+              wedding teepees and other equipment on the days surrounding the
+              wedding. If you would like to camp and would like help sourcing a
+              tent and other camping gear, we will see what we can do for you.
+              We can also recommend a glamping tent hire company,{' '}
               <a
                 href="http://www.ysellacornwall.co.uk"
                 target="_blank"
@@ -439,7 +439,7 @@ class Index extends React.Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Premier Inn
+                  Premier Inn*
                 </a>
               </li>
             </ul>
