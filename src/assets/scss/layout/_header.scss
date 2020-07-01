@@ -26,17 +26,15 @@
       font-size: 3.25em;
     }
 
-    > * {
+    >* {
       @include vendor('transition', 'opacity 3s ease');
       @include vendor('transition-delay', '0.5s');
       opacity: 1;
     }
 
     .logo {
-      @include vendor(
-        'transition',
-        ('opacity 2.25s ease', 'transform 0.5s ease')
-      );
+      @include vendor('transition',
+        ('opacity 2.25s ease', 'transform 0.5s ease'));
       @include vendor('transition-delay', '0s');
       display: block;
       margin: 0 0 (_size(element-margin) * 0.75) 0;
@@ -45,7 +43,9 @@
         display: block;
         margin: 0 auto;
         max-width: 75%;
+        max-height: 183px;
         width: 395px;
+        height: 100%;
         padding-right: 0.5rem;
       }
     }
@@ -106,7 +106,7 @@
 
   .body.is-loading & {
     &.alt {
-      > * {
+      >* {
         opacity: 0;
       }
 

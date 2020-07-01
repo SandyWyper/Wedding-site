@@ -282,9 +282,10 @@ class Index extends React.Component {
               The wedding ceremony and reception will take place in giant
               teepees at Bedruthan Steps camping field, just north of the
               village of Mawgan Porth, near Newquay, Cornwall. We ask all guests
-              to arrive at 1.30pm, the ceremony will start at 2.00pm. You can
+              to arrive at 1:30pm, the ceremony will start at 2:00pm. You can
               join us in camping on site, or there will be a shuttle bus running
               back to Newquay, so you may prefer accomodation along this route.
+              The evening reception will begin at 7:30pm.
             </p>
             <div className="text-image-container">
               <p>
@@ -304,7 +305,6 @@ class Index extends React.Component {
                 alt="Wild Tipis"
                 className="img"
               />
-              {/* <img src={tipiTwo} alt="Wild Tipis" /> */}
             </div>
 
             <p className="text-left">
