@@ -108,7 +108,7 @@ class Index extends React.Component {
                 <p className="text-left">
                   We would be honoured by your presence as we tie the knot,
                   enjoying wonderful company in a wonderful location, from
-                  1:30pm on Saturday 5th June 2021.
+                  1:30pm on Saturday 14th May 2022.
                   <br /> Sat atop the cliffs on this stunning stretch of
                   coastline; the venue holds a special place for both of us, and
                   we cannot think of a better place to share our big day with
@@ -139,7 +139,7 @@ class Index extends React.Component {
           <section id="RSVP" className="main special">
             <header className="major">
               <h2>RSVP</h2>
-              <p>Please RSVP by 5th April 2021</p>
+              <p>Please RSVP by 5th April 2022</p>
             </header>
             <form
               method="post"

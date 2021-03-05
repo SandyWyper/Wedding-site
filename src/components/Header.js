@@ -2,7 +2,7 @@ import React from 'react'
 
 // import logo from '../assets/images/fd00d518-510d-4d1a-9324-58022eea30f8_200x200.png'
 
-import logo from '../assets/images/title-3.svg'
+import logo from '../assets/images/title-2.svg'
 
 const Header = props => (
   <header id="header" className="alt">
