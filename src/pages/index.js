@@ -139,7 +139,7 @@ class Index extends React.Component {
           <section id="RSVP" className="main special">
             <header className="major">
               <h2>RSVP</h2>
-              <p>Please RSVP by 5th April 2022</p>
+              <p>Please RSVP by 21st March 2022</p>
             </header>
             <form
               method="post"
