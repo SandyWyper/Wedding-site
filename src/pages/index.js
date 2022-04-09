@@ -505,6 +505,49 @@ class Index extends React.Component {
               </div>
             </div>
           </section>
+
+          <section id="evening" className="main special">
+            <header className="major">
+              <h2>💃🏻&nbsp;🕺🏼&nbsp;&nbsp; Evening &nbsp;&nbsp;🥂&nbsp;🎂</h2>
+            </header>
+            <p className="text-left">
+              We would love for you to come and party with us to celebrate our
+              wedding day on Saturday 14th May! Ceilidh band starts at 7.30pm
+              followed by some funky disco tunes 🕺🏻 so bring your dancing shoes
+              (remember we're in a field so flats are recommended)! We will be
+              in the far Bedruthan Steps camping field with giant tipis housing
+              our dancefloor -
+              <a
+                href="https://maps.app.goo.gl/74bce6qHYXT3T7E17"
+                target="_blank"
+              >
+                https://maps.app.goo.gl/74bce6qHYXT3T7E17
+              </a>
+              .
+            </p>
+            <p className="text-left">
+              If you don't know what a ceilidh (pronounced "kay-lee") is, it's
+              <a href="https://youtu.be/62sim5knB-s" target="_blank">
+                "traditional Scottish dancing
+              </a>
+              , it's a lot of fun! Beer, wine, cider and soft drinks will be
+              available, but feel free to bring a bottle of spirits if you like
+              and we'll have the mixers. There will be sausage rolls, cheese and
+              biscuits, and cakes to line your stomachs. The tipi will be nice
+              and warm inside and the firepit will be going outside, but bring a
+              warm coat and maybe a blanket to keep you warm by the fire if
+              you're hanging out outside. The party will go on until midnight
+              and a shuttle bus will run back to Newquay until 1.00am. We hope
+              you can make it! Oh, and if you have any good suggestions for some
+              funky disco tunes, then feel free to request a song 🎤🎶
+            </p>
+
+            <a href="#RSVP">
+              <h3 style={{ 'text-decoration': 'underline', color: '#f4a259' }}>
+                Please RSVP above
+              </h3>
+            </a>
+          </section>
         </div>
       </Layout>
     )
